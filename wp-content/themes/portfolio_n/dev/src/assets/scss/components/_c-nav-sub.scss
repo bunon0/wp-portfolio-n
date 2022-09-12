@@ -1,0 +1,30 @@
+@use "global/" as g;
+
+.c-nav-sub__lists {
+  display: inline-flex;
+  flex-direction: column;
+  @include g.mq("md") {
+    flex-direction: row;
+  }
+}
+
+.c-nav-sub__list {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.c-nav-sub__link {
+  font-size: g.rem(16);
+  line-height: 1;
+  font-weight: var(--f-weight-bold);
+  width: 100%;
+  padding: g.rem(8) g.rem(16);
+  margin-top: g.rem(4);
+
+  @include g.mq("md") {
+    margin-top: initial;
+    margin-left: g.rem(16);
+    padding: g.rem(12) g.rem(16);
+  }
+}

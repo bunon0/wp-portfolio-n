@@ -1,0 +1,16 @@
+@use "global/" as g;
+
+.c-logo {
+  display: inline-flex;
+  width: 32px;
+  height: 40px;
+}
+
+.c-logo__svg {
+  display: inline-block;
+  width: 100%;
+  mask-image: url(/wordpress/wp-content/themes/portfolio_n/assets/images/logo.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: var(--c-sub);
+}

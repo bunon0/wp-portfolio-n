@@ -1,0 +1,11 @@
+@use "global/" as g;
+
+.p-sec-service__cards {
+  margin-top: g.rem(56);
+}
+
+.p-sec-service__container {
+  @include g.mq("md") {
+    max-width: g.calc-rem-container(980, g.$padding-pc);
+  }
+}

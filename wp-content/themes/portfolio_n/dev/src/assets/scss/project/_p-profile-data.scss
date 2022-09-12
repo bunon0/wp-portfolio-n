@@ -1,0 +1,16 @@
+@use "global/" as g;
+
+.p-profile-data__title {
+  font-size: g.rem(18);
+  line-height: 1;
+  font-weight: var(--f-weight-bold);
+}
+
+.p-profile-data__title:not(:first-child) {
+  margin-top: g.rem(16);
+}
+
+.p-profile-data__data {
+  font-size: g.rem(16);
+  margin-top: g.rem(8);
+}

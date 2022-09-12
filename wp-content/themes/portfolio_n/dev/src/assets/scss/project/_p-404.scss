@@ -1,0 +1,33 @@
+@use "global/" as g;
+
+.p-404__container {
+  margin-top: g.rem(72);
+}
+
+.p-404__img {
+  width: 100%;
+  max-width: g.rem(160);
+  margin: 0 auto;
+
+  @include g.mq("md") {
+    max-width: g.rem(250);
+  }
+}
+
+.p-404__img img {
+  width: 100%;
+}
+
+.p-404__text {
+  font-size: g.rem(16);
+  font-weight: var(--f-weight-bold);
+  line-height: 1;
+  letter-spacing: g.l-spacing(4);
+  margin-top: g.rem(24);
+  text-align: center;
+}
+
+.p-404__button {
+  margin-top: g.rem(32);
+  text-align: center;
+}

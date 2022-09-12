@@ -1,0 +1,29 @@
+@use "global" as g;
+
+.c-sns {
+  display: inline-flex;
+}
+
+.c-sns__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  max-width: 100%;
+  height: 32px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  &:not(:first-child) {
+    margin-left: g.rem(20);
+  }
+}
+
+.c-sns__twitter {
+  mask-image: url("/wordpress/wp-content/themes/portfolio_n/assets/images/twitter_logo_black.svg");
+  background-color: var(--c-twitter);
+}
+.c-sns__github {
+  mask-image: url("/wordpress/wp-content/themes/portfolio_n/assets/images/github_logo_black.svg");
+  background-color: var(--c-github);
+}

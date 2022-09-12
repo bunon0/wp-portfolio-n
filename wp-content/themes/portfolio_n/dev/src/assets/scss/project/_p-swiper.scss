@@ -1,0 +1,69 @@
+@use "global/" as g;
+
+.p-swiper-area {
+  position: relative;
+  width: 100%;
+  max-width: g.rem(520);
+  margin: 0 auto;
+}
+
+.p-swiper {
+  box-shadow: 0px 0px g.rem(15) g.rem(-8) var(--c-gray);
+}
+
+.p-swiper__slide {
+  transition: opacity 0.3s;
+
+  &[class*="-active"] {
+    .p-swiper-slide__img img {
+      animation: mv-fadeIn 1s 0s ease-out;
+    }
+  }
+}
+
+@keyframes mv-fadeIn {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.p-swiper__slide:not(.swiper-slide-active) {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.p-swiper__pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: g.rem(16);
+
+  @include g.mq("md") {
+    margin-top: g.rem(24);
+  }
+}
+
+.p-swiper__pagination .swiper-pagination-bullet {
+  cursor: pointer;
+  height: g.rem(4);
+  width: g.rem(32);
+  background-color: var(--c-main);
+  border: 1px solid var(--c-sub);
+
+  @include g.mq("md") {
+    width: g.rem(48);
+  }
+}
+
+.p-swiper__pagination .swiper-pagination-bullet:not(:first-child) {
+  margin-left: g.rem(8);
+  @include g.mq("md") {
+    margin-left: g.rem(20);
+  }
+}
+
+.p-swiper__pagination .swiper-pagination-bullet-active {
+  background-color: var(--c-sub);
+}

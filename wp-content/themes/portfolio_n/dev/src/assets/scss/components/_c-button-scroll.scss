@@ -1,0 +1,30 @@
+@use "global/" as g;
+
+.c-button-scroll {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--c-main);
+  border: 1px solid var(--c-gray);
+  padding: g.rem(4) g.rem(6);
+  position: fixed;
+  bottom: g.rem(10);
+  right: g.rem(10);
+  z-index: g.z-index("button-scroll");
+  @include g.mq("md") {
+    display: none;
+  }
+}
+
+.c-button-text {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  line-height: 1;
+  font-size: g.rem(14);
+  font-weight: var(--f-weight-bold);
+}
+
+.c-button-scroll__icon {
+  display: inline-block;
+  width: g.rem(16);
+  margin-left: g.rem(4);
+}

@@ -1,0 +1,83 @@
+@use "global/" as g;
+
+.p-mv__contents {
+  padding-top: g.rem(131);
+  padding-bottom: g.rem(100);
+  position: relative;
+  @include g.mq("md") {
+    padding-top: g.rem(39);
+    padding-bottom: g.rem(71);
+  }
+}
+
+.p-mv-title {
+  font-family: var(--f-family-sub);
+  font-weight: var(--f-weight-regular);
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-mv-title__name {
+  display: inline-block;
+  font-size: g.rem(32);
+  color: var(--c-accent);
+  letter-spacing: g.l-spacing(4);
+}
+
+.p-mv-title__head {
+  font-size: g.rem(64);
+  color: var(--c-sub);
+  display: inline-block;
+  letter-spacing: g.l-spacing(4);
+  @include g.mq("md") {
+    font-size: g.rem(80);
+  }
+}
+
+.p-mv-title__text {
+  display: inline-block;
+  font-size: g.rem(20);
+  margin-top: g.rem(7);
+  margin-left: g.rem(3);
+
+  @include g.mq("md") {
+    font-size: g.rem(24);
+  }
+}
+
+.p-mv__vertical-text {
+  position: absolute;
+}
+
+.p-mv__vertical-text.c-mv-vertical-text--coding {
+  top: g.rem(131);
+  left: g.rem(calc(g.$padding-sp * -1 + 2));
+
+  @include g.mq("md") {
+    top: g.rem(155);
+    left: 0;
+  }
+}
+
+.p-mv__vertical-text.c-mv-vertical-text--design {
+  top: g.rem(131);
+  right: g.rem(calc(g.$padding-sp * -1 + 2));
+
+  @include g.mq("md") {
+    right: 0;
+    top: g.rem(155);
+  }
+}
+
+.p-mv__button {
+  margin-top: g.rem(32);
+  text-align: center;
+
+  @include g.mq("md") {
+    margin-top: g.rem(40);
+  }
+}

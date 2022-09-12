@@ -1,0 +1,25 @@
+@use "global/" as g;
+
+.c-mv-initial {
+  font-family: var(--f-family-sub);
+  font-size: g.rem(64);
+  font-weight: var(--f-weight-regular);
+  line-height: 1;
+  color: var(--c-accent);
+  position: absolute;
+}
+
+.c-mv-initial--o {
+  top: 0;
+  right: 0;
+}
+
+.c-mv-initial--b {
+  bottom: 0;
+  left: 0;
+}
+
+.c-mv-initial--u {
+  bottom: 0;
+  right: 0;
+}

@@ -1,0 +1,9 @@
+@use "global/" as g;
+
+.u-space-products {
+  margin-top: g.rem(72);
+
+  @include g.mq("md") {
+    margin-top: g.rem(80);
+  }
+}

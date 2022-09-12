@@ -1,0 +1,47 @@
+@use "global/" as g;
+
+.p-product__container {
+  margin-top: g.rem(72);
+
+  @include g.mq("md") {
+    margin-top: g.rem(80);
+  }
+}
+
+.p-product__contents {
+  display: flex;
+  flex-direction: column;
+  margin-top: g.rem(56);
+
+  @include g.mq("md") {
+    flex-direction: row;
+    margin-top: g.rem(64);
+  }
+}
+
+.p-product__area {
+  width: 100%;
+  @include g.mq("md") {
+    max-width: g.rem(640);
+  }
+}
+
+.p-product__list:not(:first-child) {
+  margin-top: g.rem(40);
+
+  @include g.mq("md") {
+    margin-top: g.rem(40);
+  }
+}
+
+.p-product__button {
+  margin-top: g.rem(48);
+}
+
+.p-product__sidebar {
+  margin-top: g.rem(56);
+  @include g.mq("md") {
+    margin-top: g.rem(0);
+    margin-left: g.rem(64);
+  }
+}

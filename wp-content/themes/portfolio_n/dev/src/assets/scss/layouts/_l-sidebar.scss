@@ -1,0 +1,30 @@
+@use "global/" as g;
+
+.l-sidebar {
+  width: 100%;
+  z-index: g.z-index("sidebar");
+
+  @include g.mq("md") {
+    position: sticky;
+    height: 100%;
+    max-width: g.rem(300);
+  }
+}
+
+.l-sidebar__title {
+  font-size: g.rem(20);
+  font-weight: var(--f-weight-bold);
+  width: 100%;
+  line-height: 1;
+  padding: g.rem(14) g.rem(16);
+  background-color: var(--c-accent-opacity-40);
+}
+
+.l-sidebar__title:not(:first-child) {
+  margin-top: g.rem(32);
+}
+
+.l-sidebar__categories,
+.l-sidebar__tags {
+  margin-top: g.rem(24);
+}

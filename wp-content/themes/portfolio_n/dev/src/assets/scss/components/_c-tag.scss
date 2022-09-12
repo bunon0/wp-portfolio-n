@@ -1,0 +1,16 @@
+@use "global/" as g;
+
+.c-tag {
+  font-size: g.rem(14);
+  line-height: 1;
+  font-weight: var(--f-weight-bold);
+  padding: g.rem(12) g.rem(8);
+  border-radius: g.rem(4);
+  border: 1px solid var(--c-sub);
+}
+
+.c-tag.is-current {
+  background-color: var(--c-gray);
+  color: var(--c-main);
+  border: none;
+}

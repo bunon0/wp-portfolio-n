@@ -1,0 +1,60 @@
+@use "global/" as g;
+
+.c-skill__label {
+  display: inline-block;
+  border: 1px solid var(--c-sub);
+  font-size: g.rem(20);
+  line-height: 1.6;
+  padding: g.rem(8) g.rem(16);
+}
+
+.c-skill__lists {
+  margin-top: g.rem(32);
+}
+
+.c-skill__list {
+  padding-bottom: g.rem(16);
+  border-bottom: 2px solid var(--c-accent);
+
+  @include g.mq("md") {
+    display: flex;
+    padding-bottom: g.rem(8);
+  }
+}
+
+.c-skill__list:not(:first-child) {
+  margin-top: g.rem(40);
+}
+
+.c-skill__head {
+  border-left: 2px solid var(--c-accent);
+  padding: g.rem(8) 0 g.rem(8) g.rem(16);
+  font-size: g.rem(20);
+
+  @include g.mq("md") {
+    border-left: none;
+    border-right: 1px solid var(--c-accent);
+    width: 100%;
+    max-width: g.rem(200);
+  }
+}
+
+.c-skill__head span {
+  display: block;
+}
+
+.c-skill__body {
+  margin-top: g.rem(8);
+  font-size: g.rem(16);
+  padding-left: g.rem(16);
+  padding-right: g.rem(8);
+  @include g.mq("md") {
+    align-self: center;
+  }
+}
+
+.c-skill__link {
+  border-bottom: 1px solid var(--c-sub);
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+}

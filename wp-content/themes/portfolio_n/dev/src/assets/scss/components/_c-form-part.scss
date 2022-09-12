@@ -1,0 +1,101 @@
+@use "global/" as g;
+
+.c-form-part {
+  width: min(100%, g.rem(540));
+  font-size: max(g.rem(16), 16px);
+}
+
+.c-form-part__head {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.c-form-part__label {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c-form-part__required,
+.c-form-part__optional {
+  display: inline-flex;
+  align-items: center;
+  font-size: max(g.rem(14), 14px);
+  font-weight: var(--f-weight-medium);
+  min-width: g.rem(40);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: g.rem(8);
+    height: g.rem(8);
+    margin-right: g.rem(4);
+  }
+}
+
+.c-form-part__required::before {
+  background-color: var(--c-red);
+}
+
+.c-form-part__optional::before {
+  background-color: var(--c-sub-rgb-opacity60);
+}
+
+.c-form-part__name {
+  font-size: g.rem(16);
+  line-height: 1;
+  font-weight: var(--f-weight-bold);
+  margin-left: g.rem(12);
+}
+
+.c-form-part__input {
+  padding: g.rem(8) g.rem(12);
+  min-height: 48px;
+  margin-top: g.rem(16);
+  border: 1px solid var(--c-sub-rgb-opacity60);
+  width: 100%;
+}
+
+.c-form-part__textarea {
+  min-height: g.rem(400);
+  margin-top: g.rem(16);
+  padding: g.rem(8) g.rem(12);
+  border: 1px solid var(--c-sub-rgb-opacity60);
+  width: 100%;
+}
+
+.c-form-part__input,
+.c-form-part__textarea {
+  &:focus,
+  &:active {
+    outline: 1px solid var(--c-green);
+    box-shadow: 0 0 6px var(--c-green);
+  }
+
+  &::placeholder {
+    color: var(--c-gray);
+  }
+}
+
+// 入寮エラー時のフォームパーツ
+.c-form-part .wpcf7-not-valid {
+  border-color: var(--c-red);
+}
+
+// 入力エラー時のラベル（テキスト）
+.c-form-part .wpcf7-not-valid-tip {
+  color: var(--c-red);
+  margin-top: g.rem(8);
+  display: inline-flex;
+  align-items: center;
+}
+
+.c-form-part .wpcf7-not-valid-tip::before {
+  content: "";
+  display: inline-block;
+  width: g.rem(16);
+  height: 1px;
+  background-color: var(--c-red);
+  margin-right: g.rem(8);
+}

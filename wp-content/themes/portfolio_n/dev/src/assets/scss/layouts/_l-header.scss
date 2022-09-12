@@ -1,0 +1,32 @@
+@use "global/" as g;
+
+.l-header {
+  width: 100%;
+  text-align: center;
+  background-color: var(--c-main);
+  border-bottom: 1px solid var(--c-accent);
+  box-shadow: 0 1px 4px -1px var(--c-sub-rgb-opacity25);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: g.z-index("header");
+}
+
+.l-header__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 64px;
+}
+
+.l-header__hamburger {
+  margin-left: auto;
+}
+
+// SPメニュー展開
+.l-header.is-menu-open {
+  box-shadow: none;
+  border-bottom: none;
+}

@@ -1,0 +1,43 @@
+@use "global/" as g;
+
+.p-product-title {
+  display: flex;
+  flex-direction: column;
+  column-gap: g.rem(16);
+  font-weight: var(--f-weight-medium);
+}
+
+.p-product-title__text {
+  font-size: g.rem(24);
+}
+
+.p-product-title__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: g.rem(4);
+  margin-top: g.rem(8);
+}
+
+.p-product-title__category {
+  display: inline-block;
+  font-size: g.rem(16);
+  flex-shrink: 0;
+  align-self: baseline;
+}
+
+.c-product-title__category::after {
+  content: "/";
+  display: inline-block;
+  margin-left: g.rem(4);
+}
+
+.c-product-title__tag {
+  display: inline-block;
+  font-size: g.rem(14);
+}
+
+.c-product-title__tag:not(:last-child)::after {
+  content: ",";
+  display: inline-block;
+}

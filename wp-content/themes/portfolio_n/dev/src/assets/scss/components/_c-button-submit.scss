@@ -1,0 +1,87 @@
+@use "global/" as g;
+
+.c-button-submit {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  align-self: center;
+}
+
+.c-button-submit:hover,
+.c-button-submit:focus {
+  cursor: pointer;
+
+  @include g.mq("md") {
+    cursor: pointer;
+    opacity: 0.8;
+
+    .c-button-submit__text {
+      left: calc(50% - 1em);
+    }
+  }
+}
+
+.c-button-submit .wpcf7-spinner {
+  display: none;
+}
+
+.c-button-submit input[type="submit"] {
+  display: inline-block;
+  min-width: g.rem(240);
+  min-height: g.rem(52);
+  background-color: var(--c-sub-rgb-opacity60);
+  border: none;
+  color: var(--c-main);
+  padding: g.rem(18) g.rem(48) g.rem(18) g.rem(48);
+  font-weight: var(--f-weight-bold);
+  letter-spacing: g.l-spacing(4);
+  position: relative;
+  transition: all 0.3s;
+  text-align: center;
+  line-height: 1;
+  font-size: 0;
+}
+
+.c-button-submit__text {
+  display: inline-block;
+  font-size: g.rem(16);
+  color: var(--c-main);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: var(--f-weight-bold);
+  letter-spacing: g.l-spacing(4);
+  transition: left 0.3s;
+  pointer-events: none;
+}
+
+.c-button-submit__line {
+  display: inline-block;
+  width: g.rem(40);
+  height: 2px;
+  background-color: var(--c-main);
+  transition: height 0.3s;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  pointer-events: none;
+}
+
+.c-button-submit input[type="submit"]:disabled {
+  background-color: var(--c-main);
+  border: 2px solid var(--c-gray);
+  cursor: not-allowed;
+
+  ~ .c-button-submit__text {
+    color: var(--c-gray);
+    cursor: not-allowed;
+  }
+
+  ~ .c-button-submit__line {
+    background-color: var(--c-gray);
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,39 @@
+@use "global/" as g;
+
+.c-title-sec {
+  text-align: center;
+}
+
+.c-title-sec__sub {
+  display: inline-flex;
+  text-align: center;
+  transform: translateX(50%);
+}
+
+.c-title-sec__vertical-text {
+  font-family: var(--f-family-sub);
+  font-size: g.rem(24);
+  letter-spacing: g.l-spacing(8);
+  line-height: 1;
+  font-weight: var(--f-weight-regular);
+  text-transform: uppercase;
+  color: var(--c-gray);
+  padding: g.rem(28) g.rem(0) g.rem(28) g.rem(8);
+  writing-mode: vertical-rl;
+  border-left: 1px solid var(--c-sub);
+  @include g.mq("md") {
+    font-size: g.rem(32);
+  }
+}
+
+.c-title-sec__main {
+  font-size: g.rem(32);
+  line-height: 1;
+  letter-spacing: g.l-spacing(4);
+  color: var(--c-sub);
+  font-weight: var(--f-weight-bold);
+  margin-top: g.rem(16);
+  @include g.mq("md") {
+    font-size: g.rem(40);
+  }
+}

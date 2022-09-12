@@ -1,0 +1,37 @@
+@use "global/" as g;
+
+.c-title-line {
+  display: flex;
+  line-height: 1;
+  font-weight: var(--f-weight-medium);
+  letter-spacing: g.l-spacing(4);
+  align-items: center;
+  column-gap: g.rem(8);
+  font-size: g.rem(24);
+
+  @include g.mq("md") {
+    font-size: g.rem(24);
+  }
+}
+
+.c-title-line__line {
+  display: block;
+  width: g.rem(32);
+  height: 2px;
+  background-color: var(--c-gray);
+  flex-shrink: 0;
+  align-self: flex-start;
+  transform: translateY(0.4em);
+  @include g.mq("md") {
+    width: g.rem(80);
+  }
+}
+
+.c-title-line.--large {
+  font-weight: var(--f-weight-bold);
+  font-size: g.rem(24);
+
+  @include g.mq("md") {
+    font-size: g.rem(28);
+  }
+}

@@ -1,0 +1,37 @@
+@use "global/" as g;
+
+.c-category {
+  display: flex;
+  line-height: 1;
+  width: max(calc(50% - g.rem(16)), g.rem(122));
+  max-width: g.rem(200);
+  font-weight: var(--f-weight-bold);
+  border: 1px solid var(--c-sub);
+
+  @include g.mq("md") {
+    width: 100%;
+  }
+}
+
+.c-category.is-current {
+  background-color: var(--c-gray);
+  color: var(--c-main);
+  border: none;
+}
+
+.c-category__number {
+  display: inline-block;
+  font-size: g.rem(14);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: var(--c-main);
+  background-color: var(--c-gray);
+  text-align: center;
+}
+
+.c-category__title {
+  display: inline-block;
+  padding: g.rem(12) g.rem(12) g.rem(12) g.rem(16);
+  font-size: g.rem(16);
+  align-self: center;
+}

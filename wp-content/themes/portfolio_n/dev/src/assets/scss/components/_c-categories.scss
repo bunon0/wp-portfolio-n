@@ -1,0 +1,14 @@
+@use "global/" as g;
+
+.c-categories {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: g.rem(16);
+  row-gap: g.rem(20);
+  min-width: g.rem(140);
+
+  @include g.mq("md") {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}

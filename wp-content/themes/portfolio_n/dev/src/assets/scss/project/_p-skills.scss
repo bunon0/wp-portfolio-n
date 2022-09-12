@@ -1,0 +1,14 @@
+@use "global/" as g;
+
+.p-skills__area {
+  margin-top: g.rem(56);
+
+  @include g.mq("md") {
+    margin-top: g.rem(0);
+    margin-left: g.rem(64);
+  }
+}
+
+.p-skills__skill:not(:first-child) {
+  margin-top: g.rem(56);
+}

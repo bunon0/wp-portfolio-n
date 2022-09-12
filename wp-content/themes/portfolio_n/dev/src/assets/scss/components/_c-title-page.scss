@@ -1,0 +1,37 @@
+@use "global/" as g;
+
+.c-title-page {
+  display: flex;
+  flex-direction: column;
+  @include g.mq("md") {
+    max-width: g.rem(1440);
+    margin: 0 auto;
+  }
+}
+
+.c-title-page__text {
+  display: inline-block;
+  font-size: g.rem(48);
+  letter-spacing: g.l-spacing(4);
+  color: var(--c-gray);
+  font-weight: var(--f-weight-medium);
+  line-height: 1;
+  padding: g.rem(8);
+
+  @include g.mq("md") {
+    padding: g.rem(16) g.rem(8);
+  }
+}
+
+.c-title-page__line {
+  display: inline-block;
+  width: 90%;
+  max-width: g.rem(320);
+  height: 2px;
+  background-color: var(--c-gray);
+
+  @include g.mq("md") {
+    width: 90%;
+    max-width: g.rem(720);
+  }
+}

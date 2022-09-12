@@ -1,0 +1,49 @@
+@use "global" as g;
+
+.c-nav-global {
+  margin-left: auto;
+  display: none;
+
+  @include g.mq("md") {
+    display: block;
+  }
+}
+
+.c-nav-global__area {
+  display: flex;
+}
+
+.c-nav-global__list {
+  margin-left: g.rem(16);
+}
+
+.c-nav-global__link {
+  font-size: g.rem(16);
+  font-weight: var(--f-weight-bold);
+  color: var(--c-sub);
+  padding: g.rem(12) g.rem(8);
+  position: relative;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--c-sub);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s, opacity 0.3s;
+  }
+}
+
+.c-nav-global__link:hover,
+.c-nav-global__link:focus {
+  @include g.mq("md") {
+    &::after {
+      width: g.rem(32);
+    }
+  }
+}

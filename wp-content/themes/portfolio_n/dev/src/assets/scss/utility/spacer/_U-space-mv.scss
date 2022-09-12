@@ -1,0 +1,5 @@
+@use "global/" as g;
+
+.p-mv {
+  margin-top: g.rem(40);
+}

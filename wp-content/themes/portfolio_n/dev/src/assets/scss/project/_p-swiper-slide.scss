@@ -1,0 +1,26 @@
+@use "global/" as g;
+
+.p-swiper-slide__item {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.p-swiper-slide__item::after {
+  content: "";
+  display: block;
+  padding-top: 61.5625%;
+}
+
+.p-swiper-slide__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.p-swiper-slide__img img {
+  width: 100%;
+  height: 100%;
+}

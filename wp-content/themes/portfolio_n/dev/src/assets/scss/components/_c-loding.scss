@@ -1,0 +1,33 @@
+@use "global/" as g;
+
+.c-loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--c-main);
+  z-index: 100000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.c-loading.is-active {
+  display: block;
+}
+
+.c-loading__svg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-loading__svg svg {
+  height: g.rem(150);
+  width: g.rem(150);
+
+  @include g.mq("md") {
+    height: g.rem(200);
+    width: g.rem(200);
+  }
+}

@@ -1,0 +1,27 @@
+@use "global/" as g;
+
+.p-sec-introduction__container {
+  width: 100%;
+
+  @include g.mq("md") {
+    max-width: g.calc-rem-container(732, g.$padding-pc);
+  }
+}
+
+.p-sec-introduction__message {
+  font-size: g.rem(20);
+  letter-spacing: g.l-spacing(8);
+  line-height: 200%;
+  color: var(--c-sub);
+  @include g.mq("md") {
+    letter-spacing: g.l-spacing(12);
+  }
+}
+
+.p-sec-introduction__button {
+  margin-top: g.rem(32);
+  text-align: center;
+  @include g.mq("md") {
+    margin-top: g.rem(40);
+  }
+}

@@ -1,0 +1,32 @@
+@use "global/" as g;
+
+.p-form-flow {
+  display: flex;
+  align-items: center;
+}
+
+.p-form-flow__item {
+  font-size: g.rem(16);
+  line-height: 1;
+  font-weight: var(--f-weight-bold);
+  color: var(--c-gray);
+
+  &:not(:first-child) {
+    display: inline-flex;
+    align-items: center;
+    margin-left: g.rem(12);
+  }
+}
+
+.p-form-flow__item:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: g.rem(48);
+  background-color: var(--c-sub);
+  margin-right: g.rem(12);
+}
+
+.p-form-flow__item.is-current {
+  color: var(--c-sub);
+}

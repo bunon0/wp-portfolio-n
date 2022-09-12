@@ -1,0 +1,25 @@
+@use "global/" as g;
+
+.c-mv-vertical-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.c-mv-vertical-text__line {
+  display: inline-block;
+  height: g.rem(120);
+  width: 1px;
+  background-color: var(--c-sub);
+}
+
+.c-mv-vertical-text__text {
+  font-size: g.rem(16);
+  font-weight: var(--f-weight-regular);
+  letter-spacing: g.l-spacing(8);
+  line-height: 1;
+  color: var(--c-sub);
+  margin-top: g.rem(8);
+  writing-mode: vertical-rl;
+}

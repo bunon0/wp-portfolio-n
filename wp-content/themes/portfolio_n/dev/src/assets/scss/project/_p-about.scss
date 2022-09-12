@@ -1,0 +1,49 @@
+@use "global/" as g;
+
+.p-about__title {
+  margin-top: g.rem(72);
+
+  @include g.mq("md") {
+    margin-top: g.rem(80);
+  }
+}
+
+.p-about__container {
+  margin-top: g.rem(56);
+
+  @include g.mq("md") {
+    margin-top: g.rem(64);
+  }
+}
+
+.p-about__lists {
+  margin-top: g.rem(40);
+
+  @include g.mq("md") {
+    margin-top: g.rem(48);
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: g.rem(40);
+    column-gap: g.rem(32);
+  }
+}
+
+.p-about__list {
+  @include g.mq("md") {
+    width: min(100%, calc(50% - g.rem(32)));
+  }
+}
+
+.p-about__list:not(:first-child) {
+  margin-top: g.rem(32);
+  @include g.mq("md") {
+    margin-top: 0;
+  }
+}
+
+.p-about__skills {
+  margin-top: g.rem(120);
+  @include g.mq("md") {
+    display: flex;
+  }
+}

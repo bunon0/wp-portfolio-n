@@ -1,0 +1,10 @@
+@use "global/" as g;
+
+.c-recaptcha-policy {
+  color: var(--c-gray);
+  margin-top: g.rem(40);
+}
+
+.c-recaptcha-policy a {
+  color: var(--c-sub);
+}

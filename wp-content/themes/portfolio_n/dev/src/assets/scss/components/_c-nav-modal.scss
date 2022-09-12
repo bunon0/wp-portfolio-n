@@ -1,0 +1,58 @@
+@use "global/" as g;
+
+.c-nav-modal {
+  margin-left: auto;
+  min-height: g.rem(480);
+  background-color: var(--c-main);
+  width: 100%;
+  padding: g.rem(40) g.rem(24) g.rem(112);
+  border-bottom: none;
+  box-shadow: none;
+  text-align: right;
+
+  position: fixed;
+  top: 64px;
+  transform: translateY(-120%);
+  right: 0;
+  transition: transform 0.2s;
+  z-index: g.z-index(modal-nav);
+
+  @include g.mq("md") {
+    display: none;
+  }
+}
+
+.c-nav-modal__lists {
+  width: 100%;
+  max-width: g.rem(240);
+  margin-left: auto;
+}
+
+.c-nav-modal__list {
+  width: 100%;
+}
+
+.c-nav-modal__list:not(:first-child) {
+  margin-top: g.rem(16);
+}
+
+.c-nav-modal__link {
+  width: 100%;
+  text-align: right;
+  padding: g.rem(12) g.rem(8) g.rem(11);
+  border-bottom: 1px solid var(--c-sub-rgb-opacity40);
+  font-size: g.rem(16);
+  font-weight: var(--f-weight-bold);
+  line-height: g.l-height(16, 16);
+}
+
+// モーダルナビアクティブ
+.c-nav-modal.is-active {
+  transform: translateY(0);
+  border-bottom: 1px solid var(--c-accent);
+  box-shadow: 0 1px 4px -1px var(--c-sub-rgb-opacity25);
+}
+
+.c-nav-modal__sns {
+  margin-top: g.rem(32);
+}

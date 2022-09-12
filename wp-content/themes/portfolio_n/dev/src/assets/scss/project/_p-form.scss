@@ -1,0 +1,28 @@
+@use "global/" as g;
+
+.p-form__input:nth-child(n + 3) {
+  margin-top: g.rem(32);
+  @include g.mq("md") {
+    margin-top: g.rem(40);
+  }
+}
+
+.p-form__area {
+  margin-top: g.rem(40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-form__area .wpcf7 {
+  width: min(100%, g.rem(540));
+}
+
+.p-form__area .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-form__submit {
+  margin-top: g.rem(40);
+}
