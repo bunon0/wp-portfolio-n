@@ -19,9 +19,9 @@
           </p>
         </div>
         <div class="p-thanks__button">
-          <a href="<?php echo esc_url(home_url("/")); ?>" class="c-button-line">
-            <span class="c-button-line__text">ホームへ</span>
-            <span class="c-button-line__line"></span>
+          <a href="<?php echo esc_url(home_url("/")); ?>" class="c-line-btn">
+            <span class="c-line-btn__text">ホームへ</span>
+            <span class="c-line-btn__line"></span>
           </a>
         </div>
       </div>

@@ -1,11 +1,11 @@
 @use "global" as g;
 
 .c-nav-global {
-  margin-left: auto;
   display: none;
 
   @include g.mq("md") {
     display: block;
+    margin-left: g.rem(40);
   }
 }
 

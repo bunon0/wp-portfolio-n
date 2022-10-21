@@ -9,6 +9,12 @@
   }
 }
 
+.l-footer__container {
+  @include g.mq("md") {
+    max-width: initial;
+  }
+}
+
 .l-footer__contents {
   width: 100%;
   height: 100%;

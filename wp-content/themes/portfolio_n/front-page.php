@@ -5,9 +5,9 @@
   <div class="p-sec-introduction__container l-container">
     <p class="p-sec-introduction__message">千葉県を拠点にWeb制作をメインに活動しています。<br>ひとりひとりの目的に寄り添うコーディングやデザインをお作りします。仕事も、遊びも情熱をもって楽しむ人であること。</p>
     <div class="p-sec-introduction__button">
-      <a href="<?php echo esc_url(home_url("/about")); ?>" class="c-button-line">
-        <span class="c-button-line__text">私について</span>
-        <span class="c-button-line__line"></span>
+      <a href="<?php echo esc_url(home_url("/about")); ?>" class="c-line-btn">
+        <span class="c-line-btn__text">私について</span>
+        <span class="c-line-btn__line"></span>
       </a>
     </div>
   </div>

@@ -47,7 +47,7 @@ const Ignore_Path = {
   js: "!./src/assets/js/**/_*.js",
 };
 
-const LocalDomain = "http://localhost:10013/";
+const LocalDomain = "http://localhost:8888/";
 
 const compileSass = done => {
   gulp

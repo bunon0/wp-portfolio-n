@@ -29,7 +29,7 @@
                     $terms = get_the_terms($POST->ID, "category");
                     foreach ($terms as $term) :
                     ?>
-                      <span class="c-products-item__category"><?php echo $term->name; ?></span>
+                      <span class="c-products-item__category">カテゴリ：<?php echo $term->name; ?></span>
                     <?php endforeach; ?>
                     <!-- tagの表示 -->
                     <?php
@@ -49,11 +49,11 @@
 
             <?php endwhile; ?>
           <?php endif; ?>
-          <?php get_template_part("parts/func", "pagination"); ?>
+          <?php get_template_part("parts/part", "pagination"); ?>
         </div>
       </article>
       <?php get_sidebar(); ?>
     </div>
   </div>
-  <?php get_template_part("parts/func", "category-scroll"); ?>
+  <?php get_template_part("parts/part", "category-scroll"); ?>
 </div>

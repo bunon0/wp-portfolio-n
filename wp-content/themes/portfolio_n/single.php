@@ -16,7 +16,7 @@
             $terms = get_the_terms($POST->ID, "category");
             foreach ($terms as $term) :
             ?>
-              <span class="c-product-title__category"><?php echo $term->name; ?></span>
+              <span class="c-product-title__category"><?php echo "カテゴリー：" . $term->name; ?></span>
             <?php endforeach; ?>
             <!-- tagの表示 -->
             <?php
@@ -42,6 +42,40 @@
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
                     <span class="c-note__title">概要</span>
+                  </div>
+                  <div class="c-note__body">
+                    <p class="c-note__text">
+                      <?php echo nl2br(esc_html($filed)); ?>
+                    </p>
+                  </div>
+                </div>
+              <?php endif; ?>
+
+              <!-- サイト規模 -->
+              <?php
+              $filed = get_field("scale");
+              if ($filed) :
+              ?>
+                <div class="p-product__list c-note">
+                  <div class="c-note__head">
+                    <span class="c-note__title">サイト規模</span>
+                  </div>
+                  <div class="c-note__body">
+                    <p class="c-note__text">
+                      <?php echo nl2br(esc_html($filed)); ?>
+                    </p>
+                  </div>
+                </div>
+              <?php endif; ?>
+
+              <!-- サイト規模 -->
+              <?php
+              $filed = get_field("function");
+              if ($filed) :
+              ?>
+                <div class="p-product__list c-note">
+                  <div class="c-note__head">
+                    <span class="c-note__title">サイトに実装した機能</span>
                   </div>
                   <div class="c-note__body">
                     <p class="c-note__text">
@@ -250,20 +284,25 @@
               </div>
               <!-- // end 【ACF】カスタムフィールド ====== -->
 
+              <div class="p-product__paginate">
+                <?php get_template_part("parts/part", "paginate"); ?>
+              </div>
+
               <div class="p-product__button">
-                <a href="<?php echo esc_url(home_url("/products")) ?>" class="c-button-line">
-                  <span class="c-button-line__text">ALLへ</span>
-                  <span class="c-button-line__line"></span>
+                <a href="<?php echo esc_url(home_url("/products")) ?>" class="c-line-btn">
+                  <span class="c-line-btn__text">ALLへ</span>
+                  <span class="c-line-btn__line"></span>
                 </a>
               </div>
           </article>
 
           <?php get_sidebar(); ?>
         </div>
-        <?php get_template_part("parts/func", "category-scroll"); ?>
+        <?php get_template_part("parts/part", "category-scroll"); ?>
 
       <?php endwhile ?>
     <?php endif; ?>
+
   </div>
 </div>
 <?php get_footer(); ?>

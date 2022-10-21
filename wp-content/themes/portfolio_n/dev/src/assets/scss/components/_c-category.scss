@@ -21,7 +21,7 @@
 
 .c-category__number {
   display: inline-block;
-  font-size: g.rem(14);
+  font-size: max(13px, g.rem(14));
   writing-mode: vertical-rl;
   text-orientation: upright;
   color: var(--c-main);
