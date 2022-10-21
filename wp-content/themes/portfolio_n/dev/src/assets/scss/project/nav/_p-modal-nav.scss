@@ -1,6 +1,6 @@
 @use "global/" as g;
 
-.c-nav-modal {
+.p-modal-nav {
   margin-left: auto;
   min-height: g.rem(480);
   background-color: var(--c-main);
@@ -22,21 +22,21 @@
   }
 }
 
-.c-nav-modal__lists {
+.p-modal-nav__lists {
   width: 100%;
   max-width: g.rem(240);
   margin-left: auto;
 }
 
-.c-nav-modal__list {
+.p-modal-nav__list {
   width: 100%;
 }
 
-.c-nav-modal__list:not(:first-child) {
+.p-modal-nav__list:not(:first-child) {
   margin-top: g.rem(16);
 }
 
-.c-nav-modal__link {
+.p-modal-nav__link {
   width: 100%;
   text-align: right;
   padding: g.rem(12) g.rem(8) g.rem(11);
@@ -47,12 +47,12 @@
 }
 
 // モーダルナビアクティブ
-.c-nav-modal.is-active {
+.p-modal-nav.is-active {
   transform: translateY(0);
   border-bottom: 1px solid var(--c-accent);
   box-shadow: 0 1px 4px -1px var(--c-sub-rgb-opacity25);
 }
 
-.c-nav-modal__sns {
+.p-modal-nav__sns {
   margin-top: g.rem(32);
 }

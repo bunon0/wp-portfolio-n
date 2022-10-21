@@ -1,6 +1,6 @@
 @use "global" as g;
 
-.c-nav-global {
+.p-global-nav {
   display: none;
 
   @include g.mq("md") {
@@ -9,15 +9,15 @@
   }
 }
 
-.c-nav-global__area {
+.p-global-nav__area {
   display: flex;
 }
 
-.c-nav-global__list {
+.p-global-nav__list {
   margin-left: g.rem(16);
 }
 
-.c-nav-global__link {
+.p-global-nav__link {
   font-size: g.rem(16);
   font-weight: var(--f-weight-bold);
   color: var(--c-sub);
@@ -39,8 +39,8 @@
   }
 }
 
-.c-nav-global__link:hover,
-.c-nav-global__link:focus {
+.p-global-nav__link:hover,
+.p-global-nav__link:focus {
   @include g.mq("md") {
     &::after {
       width: g.rem(32);

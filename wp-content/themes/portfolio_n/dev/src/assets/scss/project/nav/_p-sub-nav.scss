@@ -1,6 +1,6 @@
 @use "global/" as g;
 
-.c-nav-sub__lists {
+.p-sub-nav__lists {
   display: inline-flex;
   flex-direction: column;
   @include g.mq("md") {
@@ -8,13 +8,13 @@
   }
 }
 
-.c-nav-sub__list {
+.p-sub-nav__list {
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
 
-.c-nav-sub__link {
+.p-sub-nav__link {
   font-size: g.rem(16);
   line-height: 1;
   font-weight: var(--f-weight-bold);
