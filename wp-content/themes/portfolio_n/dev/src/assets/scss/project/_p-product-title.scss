@@ -34,7 +34,7 @@
 
 .c-product-title__tag {
   display: inline-block;
-  font-size: g.rem(14);
+  font-size: max(13px, g.rem(14));
 }
 
 .c-product-title__tag:not(:last-child)::after {

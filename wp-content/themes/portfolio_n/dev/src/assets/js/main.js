@@ -56,7 +56,9 @@ jQuery(function ($) {
   ===================== */
   function sidebarSpace() {
     let headerHight = Header.outerHeight(true);
-    SideBar.css("top", headerHight + 40);
+    if (SideBar) {
+      SideBar.css("top", headerHight + 40);
+    }
   }
 
   /* =====================
@@ -98,29 +100,30 @@ jQuery(function ($) {
       }, 100);
     }
 
-    // トップページページ内Smoothスクロール;
-    ScrollTarget.on("click", function () {
-      const href = $(this).attr("href");
-      const target = $(href == "#" || href == "" ? "html" : href);
-      const speed = 300;
-      const spaceSp = 60;
-      const spacePc = 80;
+    if (ScrollTarget) {
+      // トップページページ内Smoothスクロール;
+      ScrollTarget.on("click", function () {
+        const href = $(this).attr("href");
+        const target = $(href == "#" || href == "" ? "html" : href);
+        const speed = 300;
+        const spaceSp = 60;
+        const spacePc = 80;
 
-      // SPとPCでスクロール時の上部の余白を変える
-      if (window.matchMedia("(min-width: 768px)").matches) {
-        const position = $(target).offset().top - headerHight - spacePc;
-        $("body,html").animate({ scrollTop: position }, speed, "swing");
-      } else {
-        const position = $(target).offset().top - headerHight - spaceSp;
-        $("body,html").animate({ scrollTop: position }, speed, "swing");
-      }
+        // SPとPCでスクロール時の上部の余白を変える
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          const position = $(target).offset().top - headerHight - spacePc;
+          $("body,html").animate({ scrollTop: position }, speed, "swing");
+        } else {
+          const position = $(target).offset().top - headerHight - spaceSp;
+          $("body,html").animate({ scrollTop: position }, speed, "swing");
+        }
 
-      // スムーススクロールクリックでSPナビを閉じる
-      Hamburger.removeClass("is-active");
-      Header.removeClass("is-menu-open");
-      ModalNav.removeClass("is-active");
-    });
-
+        // スムーススクロールクリックでSPナビを閉じる
+        Hamburger.removeClass("is-active");
+        Header.removeClass("is-menu-open");
+        ModalNav.removeClass("is-active");
+      });
+    }
     return false;
   }
 
@@ -128,11 +131,13 @@ jQuery(function ($) {
   * ハンバーガーメニュー
   ===================== */
   function hamburger() {
-    Hamburger.on("click", function () {
-      Hamburger.toggleClass("is-active");
-      Header.toggleClass("is-menu-open");
-      ModalNav.toggleClass("is-active");
-    });
+    if (Hamburger) {
+      Hamburger.on("click", function () {
+        Hamburger.toggleClass("is-active");
+        Header.toggleClass("is-menu-open");
+        ModalNav.toggleClass("is-active");
+      });
+    }
   }
 
   /* =====================
@@ -152,7 +157,7 @@ jQuery(function ($) {
       speed: 2000, // スライドアニメーションのスピード（ミリ秒）
 
       autoplay: {
-        delay: 5000, // 次のスライドに切り替わるまでの時間（ミリ秒）
+        delay: 4000, // 次のスライドに切り替わるまでの時間（ミリ秒）
         disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
         waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
       },
@@ -174,26 +179,51 @@ jQuery(function ($) {
     let requiredArray = {};
     const submit = document.querySelector(".wpcf7-submit");
 
-    if (required.length > 0) {
-      submit.disabled = true;
-      required.forEach(el => {
-        if (el.value === "") {
-          requiredArray[el.name] = false;
-        }
-        el.addEventListener("input", () => {
+    if (submit) {
+      if (required.length > 0) {
+        submit.disabled = true;
+        required.forEach(el => {
           if (el.value === "") {
             requiredArray[el.name] = false;
-          } else if (requiredArray[el.name] === false) {
-            delete requiredArray[el.name];
           }
-          if (Object.keys(requiredArray).length === 0) {
-            submit.disabled = false;
-          } else {
-            submit.disabled = true;
-          }
+          el.addEventListener("input", () => {
+            if (el.value === "") {
+              requiredArray[el.name] = false;
+            } else if (requiredArray[el.name] === false) {
+              delete requiredArray[el.name];
+            }
+            if (Object.keys(requiredArray).length === 0) {
+              submit.disabled = false;
+            } else {
+              submit.disabled = true;
+            }
+          });
         });
-      });
+      }
     }
+  }
+
+  function viewportSet() {
+    let wsw = window.screen.width;
+    if (wsw <= 375) {
+      document
+        .querySelector("meta[name='viewport']")
+        .setAttribute("content", "width=375");
+    } else if (wsw >= 1500) {
+      document;
+      document
+        .querySelector("meta[name='viewport']")
+        .setAttribute("content", "width=1500");
+    } else {
+      document
+        .querySelector("meta[name='viewport']")
+        .setAttribute(
+          "content",
+          "width=device-width,initial-scale=1.0,viewport-fit=cover"
+        );
+    }
+    window.addEventListener("resize", viewportSet);
+    window.addEventListener("orientationchange", viewportSet);
   }
 
   /* =====================
@@ -207,4 +237,5 @@ jQuery(function ($) {
   hamburger();
   mvSipwerSlider();
   contactForm7Disabled();
+  viewportSet();
 });

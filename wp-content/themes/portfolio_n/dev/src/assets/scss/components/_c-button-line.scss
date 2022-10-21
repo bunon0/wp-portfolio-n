@@ -1,6 +1,6 @@
 @use "global/" as g;
 
-.c-button-line {
+.c-line-btn {
   display: inline-block;
   min-width: g.rem(240);
   background-color: var(--c-sub-rgb-opacity60);
@@ -21,23 +21,23 @@
   }
 }
 
-.c-button-line:hover,
-.c-button-line:focus {
+.c-line-btn:hover,
+.c-line-btn:focus {
   @include g.mq("md") {
-    .c-button-line__text {
+    .c-line-btn__text {
       transform: translateX(-1em);
     }
   }
 }
 
-.c-button-line__text {
+.c-line-btn__text {
   display: inline-block;
   position: relative;
   z-index: 0;
   transition: all 0.3s;
 }
 
-.c-button-line__line {
+.c-line-btn__line {
   display: inline-block;
   width: g.rem(40);
   height: 2px;

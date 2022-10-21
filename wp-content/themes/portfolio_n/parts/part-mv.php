@@ -53,9 +53,9 @@
 
       <!-- button -->
       <div class="p-mv__button">
-        <a href="<?php echo esc_url(home_url("/products")); ?>" class="c-button-line">
-          <span class="c-button-line__text">制作事例へ</span>
-          <span class="c-button-line__line"></span>
+        <a href="<?php echo esc_url(home_url("/products")); ?>" class="c-line-btn">
+          <span class="c-line-btn__text">制作事例へ</span>
+          <span class="c-line-btn__line"></span>
         </a>
       </div>
     </div>
