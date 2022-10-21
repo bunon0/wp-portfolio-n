@@ -22,60 +22,72 @@
       </div>
       <h2 class="c-title-sec__main">私が出来ること</h2>
     </div>
-    <div class="p-sec-service__cards c-cards">
-      <div class="c-card-area__card c-card">
-        <img class="c-card__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/code-01.svg")) ?>" alt="コーディングのアイコン">
-        <h3 class="c-card__title">
-          HTML / CSS<br>コーディング
-        </h3>
-        <ul class="c-card__head">
-          <li class="c-card__item">
-            ・Webサイトのコーディング
-          </li>
-          <li class="c-card__item">
-            ・Webサイトのメンテナンス
-          </li>
-        </ul>
-        <div class="c-card__body">
-          <p>他の人が見ても、分かりやすいコードを考えながらコーディングしています。CSS設(BEMなど)を取り入れながら、メンテナンス性も考えたコードを作ります。</p>
-        </div>
-      </div>
-      <div class="c-card-area__card c-card">
-        <img class="c-card__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/desktop-01.svg")) ?>" alt="デスクトップのアイコン">
-        <h3 class="c-card__title">
-          WordPressサイト<br>
-          構築 / メンテナンス
-        </h3>
-        <ul class="c-card__head">
-          <li class="c-card__item">
-            ・WordPressサイトの構築
-          </li>
-          <li class="c-card__item">
-            ・WordPressサイトのメンテナンス
-          </li>
-        </ul>
-        <div class="c-card__body">
-          <p>ご要望に寄り添う、サイトの構築を行います。どうしたら使いやすいのか？管理画面で編集出来る部分はどうするのか？メンテナンス性を考えながら作ります。</p>
-        </div>
-      </div>
-      <div class="c-card-area__card c-card">
-        <img class="c-card__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/palette-01.svg")) ?>" alt="パレットのアイコン">
-        <h3 class="c-card__title">
-          WEB<br>デザイン
-        </h3>
-        <ul class="c-card__head">
-          <li class="c-card__item">
-            ・Webサイトのデザイン
-          </li>
-          <li class="c-card__item">
-            ・バナーの作成等
-          </li>
-        </ul>
-        <div class="c-card__body">
-          <p>こめる想い、ご要望や目的などをデザインに落とし込んでいきます。コーディング出来るデザインなのか？作り手のことも考慮したデザインを作ります。</p>
-        </div>
-      </div>
+    <div class="p-sec-service__wrapper">
+      <ul class="p-sec-service__cards p-cards-type01">
+        <li class="p-sec-service__card p-card-type01">
+          <div class="c-card-type01__head">
+            <div class="p-card-type01__img">
+              <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/code-01.svg")) ?>" alt="コーディングのアイコン">
+            </div>
+            <h3 class="p-card-type01__title">
+              HTML / CSS<br>コーディング
+            </h3>
+          </div>
+          <div class="c-card-type01__content">
+            <div class="p-card-type01__body">
+              <p class="p-card-type01__heading">・サイトのコーディング</p>
+              <p class="p-card-type01__heading">・サイトのメンテナンス</p>
+            </div>
+            <div class="p-card-type01__text">
+              <p>他の人が見ても、分かりやすいコードを考えながらコーディングしています。CSS設(BEMなど)を取り入れながら、メンテナンス性も考えたコードを作ります。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-sec-service__card p-card-type01">
+          <div class="c-card-type01__head">
+            <div class="p-card-type01__img">
+              <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/desktop-01.svg")) ?>" alt="デスクトップのアイコン">
+            </div>
+            <h3 class="p-card-type01__title">
+              WordPressサイト<br>
+              構築 / メンテナンス
+            </h3>
+          </div>
+          <div class="c-card-type01__content">
+            <div class="p-card-type01__body">
+              <p class="p-card-type01__heading">・サイトの構築</p>
+              <p class="p-card-type01__heading">・サイトのメンテナンス</p>
+            </div>
+            <div class="p-card-type01__text">
+              <p>ご要望に寄り添う、サイトの構築を行います。どうしたら使いやすいのか？管理画面で編集出来る部分はどうするのか？メンテナンス性を考えながら作ります。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-sec-service__card p-card-type01">
+          <div class="c-card-type01__head">
+            <div class="p-card-type01__img">
+              <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/palette-01.svg")) ?>" alt="パレットのアイコン">
+            </div>
+            <h3 class="p-card-type01__title">
+              WEB<br>
+              デザイン
+            </h3>
+          </div>
+          <div class="c-card-type01__content">
+            <div class="p-card-type01__body">
+              <p class="p-card-type01__heading">・Webサイトのデザイン</p>
+              <p class="p-card-type01__heading">・バナーの作成等</p>
+            </div>
+            <div class="p-card-type01__text">
+              <p>こめる想い、ご要望や目的などをデザインに落とし込んでいきます。コーディング出来るデザインなのか？作り手のことも考慮したデザインを作ります。</p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
+
   </div>
 </section>
 

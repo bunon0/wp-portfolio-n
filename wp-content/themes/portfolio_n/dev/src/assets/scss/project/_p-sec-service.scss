@@ -1,11 +1,20 @@
 @use "global/" as g;
 
-.p-sec-service__cards {
+.p-sec-service__wrapper {
   margin-top: g.rem(56);
 }
 
-.p-sec-service__container {
-  @include g.mq("md") {
-    max-width: g.calc-rem-container(980, g.$padding-pc);
+.p-sec-service__cards {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: g.rem(40) 0;
+
+  @include g.mq("xl") {
+    margin-top: initial;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0 g.rem(40);
   }
 }

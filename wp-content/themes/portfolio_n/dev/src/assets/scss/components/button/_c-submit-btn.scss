@@ -1,31 +1,31 @@
 @use "global/" as g;
 
-.c-button-submit {
+.c-submit-btn {
   text-align: center;
   position: relative;
   display: inline-block;
   align-self: center;
 }
 
-.c-button-submit:hover,
-.c-button-submit:focus {
+.c-submit-btn:hover,
+.c-submit-btn:focus {
   cursor: pointer;
 
   @include g.mq("md") {
     cursor: pointer;
     opacity: 0.8;
 
-    .c-button-submit__text {
+    .c-submit-btn__text {
       left: calc(50% - 1em);
     }
   }
 }
 
-.c-button-submit .wpcf7-spinner {
+.c-submit-btn .wpcf7-spinner {
   display: none;
 }
 
-.c-button-submit input[type="submit"] {
+.c-submit-btn input[type="submit"] {
   display: inline-block;
   min-width: g.rem(240);
   min-height: g.rem(52);
@@ -42,7 +42,7 @@
   font-size: 0;
 }
 
-.c-button-submit__text {
+.c-submit-btn__text {
   display: inline-block;
   font-size: g.rem(16);
   color: var(--c-main);
@@ -56,7 +56,7 @@
   pointer-events: none;
 }
 
-.c-button-submit__line {
+.c-submit-btn__line {
   display: inline-block;
   width: g.rem(40);
   height: 2px;
@@ -70,17 +70,17 @@
   pointer-events: none;
 }
 
-.c-button-submit input[type="submit"]:disabled {
+.c-submit-btn input[type="submit"]:disabled {
   background-color: var(--c-main);
   border: 2px solid var(--c-gray);
   cursor: not-allowed;
 
-  ~ .c-button-submit__text {
+  ~ .c-submit-btn__text {
     color: var(--c-gray);
     cursor: not-allowed;
   }
 
-  ~ .c-button-submit__line {
+  ~ .c-submit-btn__line {
     background-color: var(--c-gray);
     cursor: not-allowed;
   }
