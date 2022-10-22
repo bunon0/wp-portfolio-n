@@ -1,5 +1,9 @@
 @use "global/" as g;
 
+.p-mv {
+  overflow: hidden;
+}
+
 .p-mv__contents {
   padding-top: g.rem(131);
   padding-bottom: g.rem(100);

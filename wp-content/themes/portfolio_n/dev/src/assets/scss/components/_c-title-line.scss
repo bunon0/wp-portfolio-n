@@ -6,7 +6,7 @@
   font-weight: var(--f-weight-medium);
   letter-spacing: g.l-spacing(4);
   align-items: center;
-  column-gap: g.rem(8);
+  gap: 0 g.rem(8);
   font-size: g.rem(24);
 
   @include g.mq("md") {
@@ -27,7 +27,7 @@
   }
 }
 
-.c-title-line.--large {
+.c-title-line._large {
   font-weight: var(--f-weight-bold);
   font-size: g.rem(24);
 

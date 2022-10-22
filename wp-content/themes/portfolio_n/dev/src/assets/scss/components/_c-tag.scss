@@ -7,6 +7,10 @@
   padding: g.rem(12) g.rem(8);
   border-radius: g.rem(4);
   border: 1px solid var(--c-sub);
+  transition: 0.3s;
+  &:hover {
+    border: 1px solid transparent;
+  }
 }
 
 .c-tag.is-current {

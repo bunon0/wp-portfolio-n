@@ -16,26 +16,32 @@
   <!-- header -->
   <header class="js-header l-header">
     <div class="l-header__container l-container">
-      <h1 class="l-header__logo c-logo">
-        <a class="c-logo__svg" href="<?php echo esc_url(home_url("/")); ?>"></a>
-      </h1>
+      <?php if (is_front_page()) : ?>
+        <h1 class="l-header__logo c-logo">
+          <a class="c-logo__svg" href="<?php echo esc_url(home_url("/")); ?>"></a>
+        </h1>
+      <?php else : ?>
+        <div class="l-header__logo c-logo">
+          <a class="c-logo__svg" href="<?php echo esc_url(home_url("/")); ?>"></a>
+        </div>
+      <?php endif; ?>
 
       <!-- g-nav -->
-      <nav class="l-header__g-nav c-nav-global">
-        <ul class="c-nav-global__area">
+      <nav class="l-header__g-nav p-global-nav">
+        <ul class="p-global-nav__area">
           <!-- トップページと、それ以外でリンクを出し分ける -->
           <?php if (is_front_page()) : ?>
-            <li class="c-nav-global__list"><a href="<?php echo esc_url(home_url("/")) ?>" class="c-nav-global__link">ホーム</a></li>
-            <li class="c-nav-global__list"><a href="<?php echo esc_url(home_url("/products")) ?>" class="c-nav-global__link">制作事例</a></li>
-            <li class="c-nav-global__list"><a href="<?php echo esc_url(home_url("/about")) ?>" class="c-nav-global__link">私について</a></li>
-            <li class="c-nav-global__list"><a href="#service" class="c-nav-global__link">私が出来ること</a></li>
-            <li class="c-nav-global__list"><a href="#contact" class="c-nav-global__link">お問い合わせ</a></li>
+            <li class="p-global-nav__list"><a href="<?php echo esc_url(home_url("/")) ?>" class="p-global-nav__link">ホーム</a></li>
+            <li class="p-global-nav__list"><a href="<?php echo esc_url(home_url("/products")) ?>" class="p-global-nav__link">制作事例</a></li>
+            <li class="p-global-nav__list"><a href="<?php echo esc_url(home_url("/about")) ?>" class="p-global-nav__link">私について</a></li>
+            <li class="p-global-nav__list"><a href="#service" class="p-global-nav__link">私が出来ること</a></li>
+            <li class="p-global-nav__list"><a href="#contact" class="p-global-nav__link">お問い合わせ</a></li>
           <?php else : ?>
-            <li class="c-nav-global__list"><a href="<?php echo esc_url(home_url("/")) ?>" class="c-nav-global__link">ホーム</a></li>
-            <li class="c-nav-global__list"><a href="<?php echo esc_url(home_url("/products")) ?>" class="c-nav-global__link">制作事例</a></li>
-            <li class="c-nav-global__list"><a href="<?php echo esc_url(home_url("/about")) ?>" class="c-nav-global__link">私について</a></li>
-            <li class="c-nav-global__list"><a href="<?php echo esc_url(home_url("/#service")) ?>" class="js-smooth c-nav-global__link">私が出来ること</a></li>
-            <li class="c-nav-global__list"><a href="<?php echo esc_url(home_url("/#contact")) ?>" class="js-smooth c-nav-global__link">お問い合わせ</a></li>
+            <li class="p-global-nav__list"><a href="<?php echo esc_url(home_url("/")) ?>" class="p-global-nav__link">ホーム</a></li>
+            <li class="p-global-nav__list"><a href="<?php echo esc_url(home_url("/products")) ?>" class="p-global-nav__link">制作事例</a></li>
+            <li class="p-global-nav__list"><a href="<?php echo esc_url(home_url("/about")) ?>" class="p-global-nav__link">私について</a></li>
+            <li class="p-global-nav__list"><a href="<?php echo esc_url(home_url("/#service")) ?>" class="js-smooth p-global-nav__link">私が出来ること</a></li>
+            <li class="p-global-nav__list"><a href="<?php echo esc_url(home_url("/#contact")) ?>" class="js-smooth p-global-nav__link">お問い合わせ</a></li>
           <?php endif; ?>
         </ul>
       </nav>
@@ -52,44 +58,44 @@
   </header>
 
   <!-- sp-nav -->
-  <nav class="js-modal-nav l-header__modal c-nav-modal">
-    <ul class="c-nav-modal__lists">
+  <nav class="js-modal-nav l-header__modal p-modal-nav">
+    <ul class="p-modal-nav__lists">
       <!-- トップページと、それ以外でリンクを出し分ける -->
       <?php if (is_front_page()) : ?>
-        <li class="c-nav-modal__list">
-          <a href="<?php echo esc_url(home_url("/")) ?>" class="c-nav-modal__link">ホーム</a>
+        <li class="p-modal-nav__list">
+          <a href="<?php echo esc_url(home_url("/")) ?>" class="p-modal-nav__link">ホーム</a>
         </li>
-        <li class="c-nav-modal__list">
-          <a href="<?php echo esc_url(home_url("/products")) ?>" class="c-nav-modal__link">制作事例</a>
+        <li class="p-modal-nav__list">
+          <a href="<?php echo esc_url(home_url("/products")) ?>" class="p-modal-nav__link">制作事例</a>
         </li>
-        <li class="c-nav-modal__list">
-          <a href="<?php echo esc_url(home_url("/about")) ?>" class="c-nav-modal__link">私について</a>
+        <li class="p-modal-nav__list">
+          <a href="<?php echo esc_url(home_url("/about")) ?>" class="p-modal-nav__link">私について</a>
         </li>
-        <li class="c-nav-modal__list">
-          <a href="#service" class="c-nav-modal__link">私が出来ること</a>
+        <li class="p-modal-nav__list">
+          <a href="#service" class="p-modal-nav__link">私が出来ること</a>
         </li>
-        <li class="c-nav-modal__list">
-          <a href="#contact" class="c-nav-modal__link">お問い合わせ</a>
+        <li class="p-modal-nav__list">
+          <a href="#contact" class="p-modal-nav__link">お問い合わせ</a>
         </li>
       <?php else : ?>
-        <li class="c-nav-modal__list">
-          <a href="<?php echo esc_url(home_url("/")) ?>" class="c-nav-modal__link">ホーム</a>
+        <li class="p-modal-nav__list">
+          <a href="<?php echo esc_url(home_url("/")) ?>" class="p-modal-nav__link">ホーム</a>
         </li>
-        <li class="c-nav-modal__list">
-          <a href="<?php echo esc_url(home_url("/products")) ?>" class="c-nav-modal__link">制作事例</a>
+        <li class="p-modal-nav__list">
+          <a href="<?php echo esc_url(home_url("/products")) ?>" class="p-modal-nav__link">制作事例</a>
         </li>
-        <li class="c-nav-modal__list">
-          <a href="<?php echo esc_url(home_url("/about")) ?>" class="c-nav-modal__link">私について</a>
+        <li class="p-modal-nav__list">
+          <a href="<?php echo esc_url(home_url("/about")) ?>" class="p-modal-nav__link">私について</a>
         </li>
-        <li class="c-nav-modal__list">
-          <a href="<?php echo esc_url(home_url("/#service")) ?>" class="c-nav-modal__link">私が出来ること</a>
+        <li class="p-modal-nav__list">
+          <a href="<?php echo esc_url(home_url("/#service")) ?>" class="p-modal-nav__link">私が出来ること</a>
         </li>
-        <li class="c-nav-modal__list">
-          <a href="<?php echo esc_url(home_url("/#contact")) ?>" class="c-nav-modal__link">お問い合わせ</a>
+        <li class="p-modal-nav__list">
+          <a href="<?php echo esc_url(home_url("/#contact")) ?>" class="p-modal-nav__link">お問い合わせ</a>
         </li>
       <?php endif; ?>
     </ul>
-    <div class="c-nav-modal__sns c-sns">
+    <div class="p-modal-nav__sns c-sns">
       <a class="c-sns__link c-sns__twitter" href="https://twitter.com/Nobuu_777" target="_blank" rel="noopener noreferrer"></a>
       <a class="c-sns__link c-sns__github" href="https://github.com/bunon0" target="_blank" rel="noopener noreferrer"></a>
     </div>

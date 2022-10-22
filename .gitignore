@@ -37,6 +37,8 @@ wp-config.php
 # htaccess
 /.htaccess
 
+*.user.ini
+
 # All plugins
 #
 # Note: If you wish to whitelist plugins,

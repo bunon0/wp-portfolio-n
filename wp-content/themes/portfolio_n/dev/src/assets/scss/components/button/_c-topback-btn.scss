@@ -1,6 +1,6 @@
 @use "global/" as g;
 
-.c-button-scroll {
+.c-topback-btn {
   display: inline-flex;
   align-items: center;
   background-color: var(--c-main);
@@ -23,7 +23,7 @@
   font-weight: var(--f-weight-bold);
 }
 
-.c-button-scroll__icon {
+.c-topback-btn__icon {
   display: inline-block;
   width: g.rem(16);
   margin-left: g.rem(4);

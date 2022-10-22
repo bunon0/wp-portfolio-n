@@ -3,7 +3,7 @@
 .p-product-title {
   display: flex;
   flex-direction: column;
-  column-gap: g.rem(16);
+  gap: 0 g.rem(16);
   font-weight: var(--f-weight-medium);
 }
 
@@ -15,7 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  column-gap: g.rem(4);
+  gap: 0 g.rem(4);
   margin-top: g.rem(8);
 }
 
