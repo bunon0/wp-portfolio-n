@@ -17,7 +17,7 @@
   width: 100%;
   line-height: 1;
   padding: g.rem(14) g.rem(16);
-  background-color: var(--c-accent-opacity-40);
+  border-bottom: 1px solid var(--c-gray);
 }
 
 .l-sidebar__title:not(:first-child) {

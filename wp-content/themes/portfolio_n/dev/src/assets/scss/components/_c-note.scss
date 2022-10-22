@@ -5,7 +5,7 @@
   font-weight: var(--f-weight-bold);
   line-height: 1;
   display: flex;
-  column-gap: g.rem(8);
+  gap: 0 g.rem(8);
   align-items: center;
 
   @include g.mq("md") {
@@ -22,11 +22,7 @@
   clip-path: polygon(0 0, 100% 0%, 65% 100%, 0% 100%);
 }
 
-.c-note__title.--icon {
-  width: 100%;
-}
-
-.c-note__title.--icon::before {
+.c-note__title._icon::before {
   mask-image: url("/wordpress/wp-content/themes/portfolio_n/assets/images/picture.svg");
   background-color: var(--c-twitter);
   mask-repeat: no-repeat;
@@ -64,12 +60,12 @@
   box-shadow: 0 0 g.rem(15) g.rem(-8) var(--c-gray);
 }
 
-.c-note__img.--pc {
+.c-note__img._pc {
   width: 100%;
   max-width: g.rem(600);
 }
 
-.c-note__img.--sp {
+.c-note__img._sp {
   width: 100%;
   max-width: g.rem(300);
 }

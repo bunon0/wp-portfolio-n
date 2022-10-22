@@ -5,8 +5,6 @@
     "prev_next" => true,
     "prev_text" => "<span></span>",
     "next_text" => "<span></span>",
-    // 'type'      => 'list',
-    "screen_reader_text" => "ページャー"
   );
   the_posts_pagination($args);
   ?>

@@ -19,6 +19,7 @@ a {
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.3s;
 
   @include g.mq("md") {
     &:hover,

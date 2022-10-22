@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <div class="p-about">
-  <h2 class="p-about__title c-title-page">
+  <h1 class="p-about__title c-title-page">
     <span class="c-title-page__text">私について</span>
     <span class="c-title-page__line"></span>
-  </h2>
+  </h1>
   <div class="p-about__container l-container">
 
     <div class="p-about__profile p-profile">
@@ -90,10 +90,10 @@
 
       <!-- skill -->
       <div class="p-about__skills p-skills">
-        <div class="p-skills__title p-skills-title">
+        <h2 class="p-skills__title p-skills-title">
           <span class="p-skills-title__text">スキル</span>
           <span class="p-skills-title__line"></span>
-        </div>
+        </h2>
         <div class="p-skills__area">
           <div class="p-skills__skill c-skill">
             <div class="c-skill__label">Codingツール</div>

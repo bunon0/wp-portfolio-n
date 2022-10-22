@@ -4,11 +4,11 @@
   <div class="p-product__container l-container">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
-        <h3 class="p-product__title p-product-title">
-          <div class="p-product-title__head c-title-line --large">
+        <div class="p-product__title p-product-title">
+          <h1 class="p-product-title__head c-title-line _large">
             <span class="p-product-title__line c-title-line__line"></span>
             <?php the_title(); ?>
-          </div>
+          </h1>
 
           <span class="p-product-title__label">
             <!-- categoryの表示 -->
@@ -26,7 +26,7 @@
               <span class="c-product-title__tag"><?php echo $tag->name; ?></span>
             <?php endforeach; ?>
           </span>
-        </h3>
+        </div>
 
         <div class="p-product__contents">
           <!-- product lists -->
@@ -41,7 +41,7 @@
               <div class="p-product__lists">
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">概要</span>
+                    <h2 class="c-note__title">概要</h2>
                   </div>
                   <div class="c-note__body">
                     <p class="c-note__text">
@@ -58,7 +58,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">サイト規模</span>
+                    <h2 class="c-note__title">サイト規模</h2>
                   </div>
                   <div class="c-note__body">
                     <p class="c-note__text">
@@ -75,7 +75,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">サイトに実装した機能</span>
+                    <h2 class="c-note__title">サイトに実装した機能</h2>
                   </div>
                   <div class="c-note__body">
                     <p class="c-note__text">
@@ -92,7 +92,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">レスポンシブ対応範囲</span>
+                    <h2 class="c-note__title">レスポンシブ対応範囲</h2>
                   </div>
                   <div class="c-note__body">
                     <p class="c-note__text">
@@ -109,7 +109,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">担当した範囲</span>
+                    <h2 class="c-note__title">担当した範囲</h2>
                   </div>
                   <div class="c-note__body">
                     <p class="c-note__text">
@@ -126,7 +126,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">制作期間</span>
+                    <h2 class="c-note__title">制作期間</h2>
                   </div>
                   <div class="c-note__body">
                     <p class="c-note__text">
@@ -143,7 +143,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">使用したツール</span>
+                    <h2 class="c-note__title">使用したツール</h2>
                   </div>
                   <div class="c-note__body">
                     <p class="c-note__text">
@@ -160,7 +160,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">事例へのリンク</span>
+                    <h2 class="c-note__title">事例へのリンク</h2>
                   </div>
                   <div class="c-note__body">
                     <a href="<?php echo esc_url($filed); ?>" class="c-note__link" target="_blank" rel="noopener noreferrer">
@@ -177,7 +177,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title">事例サイトのBasic認証</span>
+                    <h2 class="c-note__title">事例サイトのBasic認証</h2>
                   </div>
                   <div class="c-note__body">
                     <?php echo nl2br(esc_html($filed)); ?>
@@ -193,9 +193,9 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title --icon">レスポンシブPC</span>
+                    <h2 class="c-note__title _icon">レスポンシブPC</h2>
                   </div>
-                  <div class="c-note__img --pc">
+                  <div class="c-note__img _pc">
                     <img src="<?php echo esc_url($img_attr[0]); ?>" alt="制作事例のPC画像">
                   </div>
                 </div>
@@ -209,9 +209,9 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title --icon">レスポンシブSP</span>
+                    <h2 class="c-note__title _icon">レスポンシブSP</h2>
                   </div>
-                  <div class="c-note__img --sp">
+                  <div class="c-note__img _sp">
                     <img src="<?php echo esc_url($img_attr[0]); ?>" alt="制作事例のSP画像">
                   </div>
                 </div>
@@ -225,7 +225,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title --icon">バナーの画像</span>
+                    <h2 class="c-note__title _icon">バナーの画像</h2>
                   </div>
                   <div class="c-note__img">
                     <img src="<?php echo esc_url($img_attr[0]); ?>" alt="制作事例のバナー画像">
@@ -241,7 +241,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title --icon">バナーの画像</span>
+                    <h2 class="c-note__title _icon">バナーの画像</h2>
                   </div>
                   <div class="c-note__img">
                     <img src="<?php echo esc_url($img_attr[0]); ?>" alt="制作事例のバナー画像">
@@ -257,7 +257,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title --icon">バナーの画像</span>
+                    <h2 class="c-note__title _icon">バナーの画像</h2>
                   </div>
                   <div class="c-note__img">
                     <img src="<?php echo esc_url($img_attr[0]); ?>" alt="制作事例のバナー画像">
@@ -273,7 +273,7 @@
               ?>
                 <div class="p-product__list c-note">
                   <div class="c-note__head">
-                    <span class="c-note__title --icon">バナーの画像</span>
+                    <h2 class="c-note__title _icon">バナーの画像</h2>
                   </div>
                   <div class="c-note__img">
                     <img src="<?php echo esc_url($img_attr[0]); ?>" alt="制作事例のバナー画像">

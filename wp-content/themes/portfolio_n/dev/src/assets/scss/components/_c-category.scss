@@ -7,9 +7,17 @@
   max-width: g.rem(200);
   font-weight: var(--f-weight-bold);
   border: 1px solid var(--c-sub);
+  transition: 0.3s;
 
   @include g.mq("md") {
     width: 100%;
+  }
+
+  &:hover {
+    @include g.mq("md") {
+      opacity: 1;
+      transform: translateX(g.rem(10));
+    }
   }
 }
 

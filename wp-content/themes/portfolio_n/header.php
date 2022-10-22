@@ -16,9 +16,15 @@
   <!-- header -->
   <header class="js-header l-header">
     <div class="l-header__container l-container">
-      <h1 class="l-header__logo c-logo">
-        <a class="c-logo__svg" href="<?php echo esc_url(home_url("/")); ?>"></a>
-      </h1>
+      <?php if (is_front_page()) : ?>
+        <h1 class="l-header__logo c-logo">
+          <a class="c-logo__svg" href="<?php echo esc_url(home_url("/")); ?>"></a>
+        </h1>
+      <?php else : ?>
+        <div class="l-header__logo c-logo">
+          <a class="c-logo__svg" href="<?php echo esc_url(home_url("/")); ?>"></a>
+        </div>
+      <?php endif; ?>
 
       <!-- g-nav -->
       <nav class="l-header__g-nav p-global-nav">

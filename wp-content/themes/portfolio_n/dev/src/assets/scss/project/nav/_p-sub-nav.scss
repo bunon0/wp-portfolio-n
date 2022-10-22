@@ -3,8 +3,11 @@
 .p-sub-nav__lists {
   display: inline-flex;
   flex-direction: column;
+  width: 100%;
+  max-width: g.rem(500);
   @include g.mq("md") {
     flex-direction: row;
+    max-width: initial;
   }
 }
 

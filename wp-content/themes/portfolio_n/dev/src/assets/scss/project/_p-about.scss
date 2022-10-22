@@ -23,8 +23,7 @@
     margin-top: g.rem(48);
     display: flex;
     flex-wrap: wrap;
-    row-gap: g.rem(40);
-    column-gap: g.rem(32);
+    gap: g.rem(40) g.rem(32);
   }
 }
 
